@@ -50,13 +50,14 @@ public class CarController {
     * */
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+            int i = 0;
             for (Car car : cars) {
                 car.move();
                 int x = (int) Math.round(car.getX());
                 int y = (int) Math.round(car.getY());
-                frame.drawPanel.moveit(x, y);
-                // repaint() calls the paintComponent method of the panel
+                frame.drawPanel.moveit(i, x, y);
                 frame.drawPanel.repaint();
+                i++;
             }
         }
     }
@@ -108,9 +109,9 @@ public class CarController {
         }
     }
     void stopCars(){
-            for (Car car : cars){
-                car.stopEngine();
-            }
+        for (Car car : cars){
+            car.stopEngine();
+        }
     }
     void TurnOnEdgeCollision(){
         var YLimit = frame.drawPanel.getHeight();

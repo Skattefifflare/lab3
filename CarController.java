@@ -1,3 +1,7 @@
+
+import cars.Saab95;
+import cars.Scania;
+import cars.Volvo240;
 import towing.Car;
 
 import javax.swing.*;
@@ -7,7 +11,7 @@ import java.util.ArrayList;
 
 /*
 * This class represents the Controller part in the MVC pattern.
-* It's responsibilities is to listen to the View and responds in a appropriate manner by
+* Its responsibilities are to listen to the View and responds in an appropriate manner by
 * modifying the model state and the updating the view.
  */
 
@@ -32,7 +36,7 @@ public class CarController {
         // Instance of this class
         CarController cc = new CarController();
 
-        // cc.cars.add(new Volvo240());
+        cc.cars.add(new Volvo240());
 
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
@@ -60,9 +64,52 @@ public class CarController {
     // Calls the gas method for each car once
     void gas(int amount) {
         double gas = ((double) amount) / 100;
-       /* for (ACar car : cars
-                ) {
+         for (Car car : cars) {
             car.gas(gas);
-        }*/
+        }
+    }
+    void brake(int amount) {
+        double brake = ((double) amount) / 100;
+        for (Car car : cars) {
+            car.brake(brake);
+        }
+    }
+    void turboOn(){
+        for (Car car : cars){
+            if (car instanceof Saab95){
+                ((Saab95)car).setTurboOn();
+            }
+        }
+    }
+    void turboOff(){
+        for (Car car : cars){
+            if (car instanceof Saab95){
+                ((Saab95)car).setTurboOn();
+            }
+        }
+    }
+    void liftBed(){
+        for (Car car : cars){
+            if (car instanceof Scania){
+                ((Scania)car).IncrementFlak();
+            }
+        }
+    }
+    void lowerBed(){
+        for (Car car : cars){
+            if (car instanceof Scania){
+                ((Scania)car).DecrementFlak();
+            }
+        }
+    }
+    void startCars(){
+        for (Car car : cars){
+            car.startEngine();
+    }
+    }
+    void stopCars(){
+            for (Car car : cars){
+                car.stopEngine();
+            }
     }
 }

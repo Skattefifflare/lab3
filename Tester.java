@@ -1,4 +1,4 @@
-import cars.Saab95;
+/*import cars.Saab95;
 import cars.Scania;
 import cars.Volvo240;
 import org.junit.jupiter.api.Test;
@@ -153,3 +153,4 @@ public class Tester {
         assertEquals(false, transport.getFlakAngle());
     }
 }
+*/

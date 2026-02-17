@@ -1,9 +1,6 @@
-package towing;
-
-import cars.Truck;
-
 import java.util.List;
 import java.util.Stack;
+
 
 
 public class Cargo<E extends Car> {

@@ -1,14 +1,12 @@
-package cars;
-
-import towing.Car;
-
 import java.awt.*;
+
+
 
 public class Scania extends Car implements Truck  {
 
 
     public Scania(){
-        super(2, 25, Color.pink, "cars.Scania");
+        super(2, 25, Color.pink, "Scania");
     }
 
     private int flakAngle;

@@ -1,9 +1,6 @@
-package towing;
-
-import cars.Truck;
-
 import java.awt.*;
 import java.util.List;
+
 
 public class Transportbil extends Car implements Truck {
 
@@ -13,7 +10,7 @@ public class Transportbil extends Car implements Truck {
     }
 
     public Transportbil(){
-        super(2, 25, Color.green, "towing.Transportbil");
+        super(2, 25, Color.green, "Transportbil");
         cargo = new Cargo<Car>(7); // antal i flaket ska vara en constructor parameter?
     }
 
@@ -55,14 +52,12 @@ public class Transportbil extends Car implements Truck {
         double length = Math.sqrt((Math.pow(this.getX()-car.getX(),2)+Math.pow(this.getY()-car.getY(),2)));
         if (!flakUp && length<1) {
             cargo.Add(car);
-            car.StartTowing();
         }
     }
     public void deloadCar(){
         if (flakUp){
             var car = cargo.Remove();
             car.SetPos(this.getX()-10, this.getY());
-            car.StopTowing();
         }
     }
 

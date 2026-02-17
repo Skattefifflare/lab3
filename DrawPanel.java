@@ -33,6 +33,13 @@ public class DrawPanel extends JPanel{
         try {
             carImages.add(ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg")));
             carPoints.add(new Point(0,0));
+
+            carImages.add(ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Saab95.jpg")));
+            carPoints.add(new Point(0,100));
+
+            carImages.add(ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Scania.jpg")));
+            carPoints.add(new Point(0,100));
+
             volvoWorkshopImage = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/VolvoBrand.jpg"));
         }
         catch (IOException ex) {

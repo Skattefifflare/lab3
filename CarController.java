@@ -1,9 +1,3 @@
-
-import cars.Saab95;
-import cars.Scania;
-import cars.Volvo240;
-import towing.Car;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -37,12 +31,14 @@ public class CarController {
         CarController cc = new CarController();
 
         cc.cars.add(new Volvo240());
-
+        cc.cars.add(new Saab95());
+        cc.cars.get(1).SetPos(0, 100);
+        cc.cars.add(new Scania());
+        cc.cars.get(2).SetPos(0, 200);
 
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
 
-        // Start the timer
         cc.timer.start();
     }
 
@@ -119,14 +115,25 @@ public class CarController {
         var YLimit = frame.drawPanel.getHeight();
         var XLimit = frame.drawPanel.getWidth();
         for (Car car : cars){
-            if (car.getX() < 0 || car.getX() > XLimit ||
-                car.getY() < 0 || car.getY() > YLimit){
-
-                car.stopEngine();
-                car.turnLeft();
-                car.turnLeft();
-                car.startEngine();
+            if (car.getX() < 0){
+                car.SetPos(0, car.getY());
+                turn(car);
+            } else if (car.getX() > XLimit) {
+                car.SetPos(XLimit, car.getY());
+                turn(car);
+            } else if (car.getY() < 0) {
+                car.SetPos(car.getX(), 0);
+                turn(car);
+            } else if (car.getY() > YLimit) {
+                car.SetPos(car.getX(), YLimit);
+                turn(car);
             }
         }
+    }
+    private void turn(Car car){
+        car.stopEngine();
+        car.turnLeft();
+        car.turnLeft();
+        car.startEngine();
     }
 }

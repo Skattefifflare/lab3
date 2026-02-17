@@ -86,17 +86,16 @@ public class CarView extends JFrame{
         this.add(controlPanel);
         controlPanel.setBackground(Color.CYAN);
 
-
         startButton.setBackground(Color.blue);
         startButton.setForeground(Color.green);
         startButton.setPreferredSize(new Dimension(X/5-15,200));
         this.add(startButton);
 
-
         stopButton.setBackground(Color.red);
         stopButton.setForeground(Color.black);
         stopButton.setPreferredSize(new Dimension(X/5-15,200));
         this.add(stopButton);
+
 
 
         gasButton.addActionListener(new ActionListener() {
@@ -133,8 +132,6 @@ public class CarView extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) { carC.stopCars();}
         });
-
-
 
 
 

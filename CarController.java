@@ -105,11 +105,25 @@ public class CarController {
     void startCars(){
         for (Car car : cars){
             car.startEngine();
-    }
+        }
     }
     void stopCars(){
             for (Car car : cars){
                 car.stopEngine();
             }
+    }
+    void TurnOnEdgeCollision(){
+        var YLimit = frame.drawPanel.getHeight();
+        var XLimit = frame.drawPanel.getWidth();
+        for (Car car : cars){
+            if (car.getX() <= 0 || car.getX() >= XLimit ||
+                car.getY() <= 0 || car.getY() >= YLimit){
+
+                car.stopEngine();
+                car.turnLeft();
+                car.turnLeft();
+                car.startEngine();
+            }
+        }
     }
 }

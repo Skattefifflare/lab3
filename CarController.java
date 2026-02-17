@@ -38,6 +38,7 @@ public class CarController {
 
         cc.cars.add(new Volvo240());
 
+
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
 
@@ -50,6 +51,7 @@ public class CarController {
     * */
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+            turnOnEdgeCollision();
             int i = 0;
             for (Car car : cars) {
                 car.move();
@@ -113,12 +115,12 @@ public class CarController {
             car.stopEngine();
         }
     }
-    void TurnOnEdgeCollision(){
+    void turnOnEdgeCollision(){
         var YLimit = frame.drawPanel.getHeight();
         var XLimit = frame.drawPanel.getWidth();
         for (Car car : cars){
-            if (car.getX() <= 0 || car.getX() >= XLimit ||
-                car.getY() <= 0 || car.getY() >= YLimit){
+            if (car.getX() < 0 || car.getX() > XLimit ||
+                car.getY() < 0 || car.getY() > YLimit){
 
                 car.stopEngine();
                 car.turnLeft();

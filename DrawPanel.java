@@ -22,7 +22,7 @@ public class DrawPanel extends JPanel{
     // TODO: Make this general for all cars
     void moveit(int index, int x, int y){
         carPoints.get(index).x = x;
-        carPoints.get(index).y = y; //
+        carPoints.get(index).y = y;
     }
 
     // Initializes the panel and reads the images
@@ -31,7 +31,8 @@ public class DrawPanel extends JPanel{
         this.setPreferredSize(new Dimension(x, y));
         this.setBackground(Color.black);
         try {
-            carImages.set(0, ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg")));
+            carImages.add(ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg")));
+            carPoints.add(new Point(0,0));
             volvoWorkshopImage = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/VolvoBrand.jpg"));
         }
         catch (IOException ex) {

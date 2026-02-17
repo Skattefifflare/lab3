@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5a12fd5e-fb6f-4a30-af44-e90ae41e3a64" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workshop.java" beforeDir="false" afterPath="$PROJECT_DIR$/Workshop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/Movable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/Saab95.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/Scania.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/Truck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/Volvo240.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/towing/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/towing/Cargo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/towing/Transportbil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Transportbil.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="39nqD8VcGqfAbxrgRNUnHLuzc3m" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CarController.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/Appar/lab3&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Appar\lab3" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.240" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5a12fd5e-fb6f-4a30-af44-e90ae41e3a64" name="Changes" comment="" />
+      <created>1771342059512</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1771342059512</updated>
+      <workItem from="1771342060788" duration="8495000" />
+      <workItem from="1771351111439" duration="2020000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

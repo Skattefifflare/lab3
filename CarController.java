@@ -29,7 +29,16 @@ public class CarController {
         // Instance of this class
         CarController cc = new CarController();
 
+<<<<<<< Updated upstream
         // cc.cars.add(new Volvo240());
+=======
+        cc.cars.add(new Volvo240());
+        cc.cars.add(new Saab95());
+        cc.cars.get(1).SetPos(0, 100);
+        cc.cars.add(new Scania());
+        cc.cars.get(2).SetPos(0, 200);
+
+>>>>>>> Stashed changes
 
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
@@ -43,7 +52,13 @@ public class CarController {
     * */
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+<<<<<<< Updated upstream
  /*           for (ACar car : cars) {
+=======
+            edgeCollision();
+            int i = 0;
+            for (Car car : cars) {
+>>>>>>> Stashed changes
                 car.move();
                 int x = (int) Math.round(car.getPosition().getX());
                 int y = (int) Math.round(car.getPosition().getY());
@@ -54,12 +69,85 @@ public class CarController {
         }
     }
 
-    // Calls the gas method for each car once
     void gas(int amount) {
         double gas = ((double) amount) / 100;
        /* for (ACar car : cars
                 ) {
             car.gas(gas);
+<<<<<<< Updated upstream
         }*/
+=======
+        }
+    }
+    void brake(int amount) {
+        double brake = ((double) amount) / 100;
+        for (Car car : cars) {
+            car.brake(brake);
+        }
+    }
+    void turboOn(){
+        for (Car car : cars){
+            if (car instanceof Saab95){
+                ((Saab95)car).setTurboOn();
+            }
+        }
+    }
+    void turboOff(){
+        for (Car car : cars){
+            if (car instanceof Saab95){
+                ((Saab95)car).setTurboOn();
+            }
+        }
+    }
+    void liftBed(){
+        for (Car car : cars){
+            if (car instanceof Scania){
+                ((Scania)car).IncrementFlak();
+            }
+        }
+    }
+    void lowerBed(){
+        for (Car car : cars){
+            if (car instanceof Scania){
+                ((Scania)car).DecrementFlak();
+            }
+        }
+    }
+    void startCars(){
+        for (Car car : cars){
+            car.startEngine();
+        }
+    }
+    void stopCars(){
+        for (Car car : cars){
+            car.stopEngine();
+        }
+    }
+    void edgeCollision(){
+        var YLimit = frame.drawPanel.getHeight();
+        var XLimit = frame.drawPanel.getWidth();
+
+        for (Car car : cars){
+            if (car.getX() < 0){
+                car.SetPos(0, car.getY());
+                turn(car);
+            } else if (car.getX() > XLimit) {
+                car.SetPos(XLimit, car.getY());
+                turn(car);
+            } else if (car.getY() < 0) {
+                car.SetPos(car.getX(), 0);
+                turn(car);
+            } else if (car.getY() > YLimit) {
+                car.SetPos(car.getX(), YLimit);
+                turn(car);
+            }
+        }
+>>>>>>> Stashed changes
+    }
+    void turn(Car car){
+        car.stopEngine();
+        car.turnLeft();
+        car.turnLeft();
+        car.startEngine();
     }
 }

@@ -50,7 +50,7 @@ public class Transportbil extends Car implements Truck {
     }
     public void loadCar(Car car){
         double length = Math.sqrt((Math.pow(this.getX()-car.getX(),2)+Math.pow(this.getY()-car.getY(),2)));
-        if (!flakUp && length<1) {
+        if (!flakUp && length<50) {
             cargo.Add(car);
         }
     }

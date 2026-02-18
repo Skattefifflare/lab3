@@ -14,6 +14,7 @@ public class Cargo<E extends Car> {
     }
 
     public void Add(E car){
+        if (car_list.contains(car)) return;
         if (car instanceof Truck || car_list.size() == max_cars) return;
         car_list.add(car);
     }

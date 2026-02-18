@@ -1,5 +1,3 @@
-package cars;
-
 public interface Truck {
 
     public void IncrementFlak();

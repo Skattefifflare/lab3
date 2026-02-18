@@ -1,8 +1,8 @@
-/*import cars.Saab95;
-import cars.Scania;
-import cars.Volvo240;
+/*import Saab95;
+import Scania;
+import Volvo240;
 import org.junit.jupiter.api.Test;
-import towing.Transportbil;
+import Transportbil;
 
 import static org.junit.jupiter.api.Assertions.*;
 

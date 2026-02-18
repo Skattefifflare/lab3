@@ -24,17 +24,22 @@ public class CarController {
 
     // A list of cars, modify if needed
     ArrayList<Car> cars = new ArrayList<>();
-
+    Workshop<Volvo240> workshop = new Workshop<>(10);
 
     public static void main(String[] args) {
         // Instance of this class
         CarController cc = new CarController();
 
         cc.cars.add(new Volvo240());
+        cc.cars.get(0).SetPos(0, 300);
         cc.cars.add(new Saab95());
         cc.cars.get(1).SetPos(0, 100);
         cc.cars.add(new Scania());
         cc.cars.get(2).SetPos(0, 200);
+
+
+
+
 
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
@@ -56,6 +61,9 @@ public class CarController {
                 frame.drawPanel.moveit(i, x, y);
                 frame.drawPanel.repaint();
                 i++;
+                if (car instanceof Volvo240) {
+                    workshop.LeaveCar((Volvo240) car);
+                }
             }
         }
     }

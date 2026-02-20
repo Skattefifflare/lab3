@@ -126,11 +126,11 @@ public class CarController {
             if (car.getX() < 0){
                 car.SetPos(0, car.getY());
                 turn(car);
-            } else if (car.getX() > XLimit) {
-                car.SetPos(XLimit, car.getY());
+            } else if (car.getX() + 100 > XLimit) {
+                car.SetPos(XLimit-100, car.getY());
                 turn(car);
-            } else if (car.getY() < 0) {
-                car.SetPos(car.getX(), 0);
+            } else if (car.getY() + 60 < 0) {
+                car.SetPos(car.getX(), -60);
                 turn(car);
             } else if (car.getY() > YLimit) {
                 car.SetPos(car.getX(), YLimit);

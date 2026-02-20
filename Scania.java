@@ -19,7 +19,11 @@ public class Scania extends Car implements Truck  {
         if (flakAngle != 0) return 0;
         else return 1;
     }
-
+    @Override
+    public void startEngine(){
+        if (flakAngle != 0) return;
+        super.startEngine();
+    }
 
     public void DecrementFlak() {
         if(getCurrentSpeed() == 0){

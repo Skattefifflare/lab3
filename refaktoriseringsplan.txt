@@ -1,0 +1,32 @@
+Vi planerar på att bygga om CarController, CarView och DrawPanel till nya klasser:
+-CarProgram
+    huvudklassen i projektet.
+    kommer innehålla updateringsloopen som vi flyttar från CarController.
+    kommer innehålla de övriga klasserna och agera manager mellan dem.
+-CarRender
+    en ombyggnad av DrawPanel.
+    kommer inte vara beroende av de andra klasserna eller innehålla en billista.
+    tar en lista av bilar som CarProgram tillhandahåller.
+    endast ansvarig för att rita ut bilarna och knapppanelen.
+-ButtonStates
+    en ny liten dataklass som endast innehåller booleans och ints för att representera knappvärdena.
+-Buttons
+    en ombyggnad av CarView.
+    kommer endast innehålla knapppanelen.
+    skickar tillbaka ett ButtonStates-objekt när den uppdateras.
+-CarController
+    refaktoriserar om klassen till att endast innehålla och updatera bilinstanserna.
+    tar bort loopen och beroenden till de andra klasserna.
+    ger CarProgram tillgång till bilarna genom en getter.
+    tar ett ButtonStates objekt i sin uppdateringsmetod och kallar på bilarnas metoder utifrån ButtonStates objektets värden.
+
+
+Det första att göra är att byta ut vårt Truck interface till en abstrakt class för att öka cohesion och minska kodduplicering.
+Sedan korrigerar vi access modifiers i de gamla klasserna innan vi skriver de nya för att se till att de inte kommer åt saker som sedan görs privata.
+
+CarRender kan byggas helt självständigt efter det då den endast behöver veta att den får en lista med bilar.
+
+ButtonStates måste skapas innan CarController eftersom att CarController ska konsumera den.
+när ButtonStates är skapad kan CarController och Buttons skrivas oberoende av varandra.
+
+När de relevanta metoderna i CarRender, Buttons och CarController är skrivna, kan CarProgram skrivas självständigt då den endast agerar mellanhand mellan dessa klasser.
